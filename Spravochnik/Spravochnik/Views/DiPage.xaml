@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.Views.DiPage">
+  <ContentPage.Content>
+      <StackLayout>
+            <Label Text="Для просмотра всех вариантов тормозных жидкостей, вам необходимо сначала" 
+                   Margin="0,200,0,0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray">
+            </Label>
+            <Label Text="Войти в аккаунт."
+                   Margin="0,-10,0,0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black">
+            </Label>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

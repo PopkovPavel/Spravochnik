@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:controls="clr-namespace:Spravochnik.Controls"
+       xmlns:views="clr-namespace:Spravochnik.Views"
+       FlyoutBackgroundColor="White"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       Navigating="OnNavigating"
+       Navigated="OnNavigated"
+       x:Class="Spravochnik.AppShell">
+    <Shell.Resources>
+        <Style x:Key="BaseStyle"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#455A64" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="White" />
+            <Setter Property="Shell.TitleColor"
+                    Value="White" />
+            <Setter Property="Shell.DisabledColor"
+                    Value="#B4FFFFFF" />
+            <Setter Property="Shell.UnselectedColor"
+                    Value="#95FFFFFF" />
+        </Style>
+        <Style TargetType="ShellItem"
+               BasedOn="{StaticResource BaseStyle}" />
+        <Style x:Key="Dot3Shell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#4e4469" />
+        </Style>
+        <Style x:Key="DotiShell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#5080ff" />
+        </Style>
+        <Style x:Key="Dot4Shell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#5080ff" />
+        </Style>
+        <Style x:Key="Dot5Shell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#d24c4b" />
+        </Style>
+        <Style x:Key="Dot51Shell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#b44706" />
+        </Style>
+        <Style x:Key="AboutShell"
+               TargetType="Element"
+               BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#2727ab" />
+        </Style>
+    </Shell.Resources>
+    
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Route="fluids"
+                Title="Fluids"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent x:Name ="dot3sh"
+                      Route="dot3"
+                      Style="{StaticResource Dot3Shell}"
+                      Title="DOT-3"
+                      Icon="dot_3.png"
+                      ContentTemplate="{DataTemplate views:D3Page}" />
+        <ShellContent x:Name ="dotish"
+                      Route="doti"
+                      Style="{StaticResource DotiShell}"
+                      Title="..."
+                      Icon="dot_4.png"
+                      ContentTemplate="{DataTemplate views:DiPage}" />
+        <ShellContent x:Name ="dot4sh"
+                      Route="dot4"
+                      Style="{StaticResource Dot4Shell}"
+                      Title="DOT-4"
+                      Icon="dot_4.png"
+                      ContentTemplate="{DataTemplate views:D4Page}" />
+        <ShellContent x:Name ="dot5sh"
+                      Route="dot5"
+                      Style="{StaticResource Dot5Shell}"
+                      Title="DOT-5"
+                      Icon="dot_5.png"
+                      ContentTemplate="{DataTemplate views:D5Page}" />
+        <ShellContent x:Name ="dot51sh"
+                      Route="dot51"
+                      Style="{StaticResource Dot51Shell}"
+                      Title="DOT-5.1"
+                      Icon="dot_5_1.png"
+                      ContentTemplate="{DataTemplate views:D51Page}" />
+    </FlyoutItem>
+    
+    <ShellContent Route="account"
+                  Style="{StaticResource AboutShell}"
+                  Title="Аккаунт"
+                  Icon="account.png"
+                  ContentTemplate="{DataTemplate views:AccountPage}" />
+    <ShellContent Route="about"
+                  Style="{StaticResource AboutShell}"
+                  Title="Информация"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:AboutPage}" />
+
+    <MenuItem Text="Помощь"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://vk.com/pashanotcute" />
+    
+</Shell>

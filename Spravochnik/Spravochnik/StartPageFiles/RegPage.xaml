@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.RegPage">
+    <NavigationPage.TitleView>
+        <Grid >
+            <Label x:Name="_test1"
+                   Text="᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ Регистрация"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Padding="0">
+                <!-- Электронная почта -->
+                <StackLayout HeightRequest="100" 
+                             VerticalOptions="Start" 
+                             HorizontalOptions="FillAndExpand" 
+                             Spacing="15" 
+                             Margin="0,70,0,0"
+                             BackgroundColor="Transparent">
+                    <Label Text="Электронная почта"
+                           TextColor="Black"
+                           FontSize="Large" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" />
+                    <Entry x:Name="_mail"
+                           Text=""
+                           ClearButtonVisibility="WhileEditing"
+                           Keyboard="Email"
+                           Placeholder="Введите E-Mail"
+                           TextColor="Black"
+                           FontSize="Medium"
+                           BackgroundColor="Transparent" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <!-- Пароль -->
+                <StackLayout HeightRequest="150" 
+                             VerticalOptions="Start" 
+                             HorizontalOptions="FillAndExpand" 
+                             Spacing="15" 
+                             BackgroundColor="Transparent">
+                    <Label Text="Пароль"
+                           TextColor="Black"
+                           FontSize="Large" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" />
+                    <Entry x:Name="_pass1"
+                           Text=""
+                           ClearButtonVisibility="WhileEditing"
+                           Keyboard="Default"
+                           Placeholder="Введите пароль"
+                           IsPassword="True"
+                           TextColor="Black"
+                           FontSize="Medium"
+                           BackgroundColor="Transparent" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="CenterAndExpand" />
+                    <!-- Подтверждение пароля -->
+                    <Entry x:Name="_pass2"
+                           Text=""
+                           ClearButtonVisibility="WhileEditing"
+                           Keyboard="Default"
+                           Placeholder="Введите пароль еще раз"
+                           IsPassword="True"
+                           TextColor="Black"
+                           FontSize="Medium"
+                           BackgroundColor="Transparent" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Button x:Name="regButton" 
+                        Text="Регистрация"
+                        FontSize="14"
+                        TextColor="White" 
+                        BackgroundColor="#05438c" 
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HorizontalOptions="Center" 
+                        Margin="0,35,0,0" 
+                        Padding="100,15,100,15" 
+                        Clicked="regAcceptButton_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

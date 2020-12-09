@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Spravochnik.Controls"
+             xmlns:data="clr-namespace:Spravochnik.Data"
+             xmlns:views="clr-namespace:Spravochnik.Views"
+             x:Class="Spravochnik.Views.D3Page"
+             Title="DOT-3">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#039BE6" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <Shell.SearchHandler>
+        <controls:FluidSearchHandler Placeholder="Поиск..."
+                                      ShowsResults="true"
+                                      ItemTemplate="{StaticResource FluidSearchTemplate}"
+                                      Fluids="{x:Static data:Dot3Data.D3}"
+                                      SelectedItemNavigationTarget="{x:Type views:D3DetailPage}" />
+    </Shell.SearchHandler>
+
+    <CollectionView Margin="20"
+                    ItemsSource="{x:Static data:Dot3Data.D3}"
+                    ItemTemplate="{StaticResource FluidTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged" />
+</ContentPage>

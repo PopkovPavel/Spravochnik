@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.AuthPage">
+
+    <NavigationPage.TitleView>
+        <Grid >
+            <Label Text=" ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌Авторизация"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" 
+                         Padding="0,100,0,0">
+                <!-- Номер телефона -->
+                <StackLayout HeightRequest="100" 
+                             VerticalOptions="Start" 
+                             HorizontalOptions="FillAndExpand" 
+                             Spacing="15" 
+                             BackgroundColor="Transparent">
+                    <Label Text="Электронная почта" 
+                           TextColor="Black"
+                           FontSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" />
+                    <Entry x:Name="_email"
+                           Text=""
+                           ClearButtonVisibility="WhileEditing"
+                           Keyboard="Email"
+                           IsTextPredictionEnabled="false"
+                           Placeholder="Введите E-mail"
+                           TextColor="Black"
+                           BackgroundColor="Transparent"
+                           FontSize="Medium"
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <!-- Пароль -->
+                <StackLayout HeightRequest="100" 
+                             VerticalOptions="Start" 
+                             HorizontalOptions="FillAndExpand" 
+                             Spacing="15" 
+                             BackgroundColor="Transparent">
+                    <Label Text="Пароль"
+                           TextColor="Black"
+                           FontSize="Large" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold"/>
+                    <Entry x:Name="_pass1"
+                           Text=""
+                           ClearButtonVisibility="WhileEditing"
+                           IsTextPredictionEnabled="false"
+                           Keyboard="Default"
+                           Placeholder="Введите пароль"
+                           IsPassword="True"
+                           TextColor="Black"
+                           FontSize="Medium"
+                           BackgroundColor="Transparent" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <!-- Кнопка авторизации -->
+                <Button x:Name="authButton" 
+                        Text="Войти"
+                        FontSize="18"
+                        TextColor="#E4E3E3" 
+                        BackgroundColor="#0578ff" 
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HorizontalOptions="Center" 
+                        Margin="0,35,0,0" 
+                        Padding="125,15,125,15" 
+                        Clicked="authButton_Clicked"
+                        />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

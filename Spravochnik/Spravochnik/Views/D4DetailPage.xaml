@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.Views.D4DetailPage"
+             Title="          DOT-4 Details">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="{Binding Name}"
+                   FontSize="26"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+            <Label Text="{Binding Brand}"
+                   FontSize="20"
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />
+            <Image Source="{Binding ImageUrl}" 
+                   HeightRequest="200" 
+                   WidthRequest="200" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Details}" 
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   Style="{DynamicResource BodyStyle}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.StartPage">
+    
+    <NavigationPage.TitleView>
+        <Grid>
+            <Label x:Name="_test1"
+                   Text="᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ Главная страница"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content >
+        <StackLayout Padding="12,20,12,12" >
+            <Label Text="Справочник по автомобильным ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌ ᠌тормозным жидкостям"                  
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="22"/>
+            <!-- Войти -->
+            <Button x:Name="authButton"
+                    Text="Войти" 
+                    TextColor="White"
+                    FontSize="22"
+                    BackgroundColor="#0578ff" 
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Clicked="AuthButton_Clicked"
+                    Margin="0,150,0,5"  
+                    HorizontalOptions="Center" 
+                    HeightRequest="100" 
+                    WidthRequest="280"/>
+            <!-- Регистрация -->
+            <Button x:Name="regButton" 
+                    Text="Регистрация" 
+                    TextColor="White"
+                    FontSize="18"
+                    BackgroundColor="#05438c" 
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Clicked="RegButton_Clicked"                    
+                    Margin="0,10"                   
+                    HorizontalOptions="Center" 
+                    HeightRequest="100"
+                    WidthRequest="220"/>
+            <!-- Пропустить -->
+            <Button x:Name="skipButton"
+                    Text="Пропустить"
+                    FontSize="16"
+                    BackgroundColor="Transparent" 
+                    TextColor="#001c43" 
+                    FontAttributes="Italic" 
+                    Clicked="SkipButton_Clicked" 
+                    Margin="0,25" 
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

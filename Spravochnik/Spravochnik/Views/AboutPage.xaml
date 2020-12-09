@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.Views.AboutPage"
+             Title="          Информация">
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#96d1ff</Color>
+        <Color x:Key="LightTextColor">#999999</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             VerticalOptions="Center">
+                <ContentView Padding="0,0,0,0" 
+                                 VerticalOptions="FillAndExpand">
+                    <Image Source="AboutLogo.jpg"
+                               VerticalOptions="Center" 
+                               HeightRequest="130" />
+                </ContentView>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" 
+                             Padding="16,40,16,40"
+                             Spacing="10">
+                    <Label FontSize="22">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Brake Fluids"
+                                          TextColor="Black"
+                                          FontAttributes="Bold" 
+                                          FontSize="28" />
+                                    <Span Text=" " />
+                                    <Span Text="v1.2"
+                                          FontSize="30"
+                                          ForegroundColor="{StaticResource LightTextColor}" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Это приложение было написано на XAML и C# с использованием " 
+                                         FontSize="16"/>
+                                    <Span Text="Платформы Xamarin" 
+                                          FontSize="15"
+                                          FontAttributes="Bold" 
+                                          TextColor="Blue" 
+                                          TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand, Mode=OneWay}"
+                                                                 CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Разработчик приложения " 
+                                         FontSize="16"/>
+                                    <Span Text="Павел Попков" 
+                                          FontSize="15"
+                                          FontAttributes="Bold" 
+                                          TextColor="Blue" 
+                                          TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand, Mode=OneWay}"
+                                                                 CommandParameter="https://vk.com/pashanotcute" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Сайт, откуда была взята вся информация " 
+                                         FontSize="16"/>
+                                    <Span Text="Ссылка" 
+                                          FontSize="15"
+                                          FontAttributes="Bold" 
+                                          TextColor="Blue" 
+                                          TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand, Mode=OneWay}"
+                                                                 CommandParameter="https://emex.ru/catalogs/fluids/brake/" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Margin="0,20,0,0"
+                            Text="Больше информации" 
+                            Command="{Binding TapCommand}"
+                            CornerRadius="10"
+                            CommandParameter="https://vk.com/pashanotcute"
+                            BackgroundColor="#2727ab"
+                            TextColor="White" />
+                    <Label
+                        Margin="0,60,0,0"
+                        HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Pecha Corp." 
+                                          FontSize="16"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

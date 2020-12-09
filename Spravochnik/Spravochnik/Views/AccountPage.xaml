@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spravochnik.Views.AccountPage"
+             Title="             Аккаунт">
+    
+    <ContentPage.Content >
+        <StackLayout Padding="12,20,12,12" >
+            <Label x:Name="_emailLabel" 
+                   Text="{Binding Email}"
+                   Margin="0,160,0,0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black">
+            </Label>
+            <Label x:Name="_text"
+                   Text="Вам доступен полный доступ ко всем типам тормозных жидкостей!"
+                   Margin="0,-10,0,0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray">
+            </Label>
+            <Button x:Name="_exitButton" 
+                    Text="Выйти из аккаунта"
+                    FontSize="16"
+                    TextColor="#E4E3E3" 
+                    BackgroundColor="#0578ff" 
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HorizontalOptions="Center" 
+                    Margin="0,35,0,0" 
+                    Padding="125,15,125,15" 
+                    Clicked="ExitButton_Clicked"/>
+            <!-- Войти -->
+            <Button x:Name="authButton"
+                    Text="Войти" 
+                    TextColor="White"
+                    FontSize="22"
+                    BackgroundColor="#0578ff" 
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    Clicked="AuthButton_Clicked"
+                    Margin="0,150,0,5"  
+                    HorizontalOptions="Center" 
+                    HeightRequest="100" 
+                    WidthRequest="280"/>
+            <!-- Регистрация -->
+            <Button x:Name="regButton" 
+                    Text="Регистрация" 
+                    TextColor="White"
+                    FontSize="18"
+                    BackgroundColor="#05438c" 
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    Clicked="RegButton_Clicked"                    
+                    Margin="0,10"                   
+                    HorizontalOptions="Center" 
+                    HeightRequest="100"
+                    WidthRequest="220"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
