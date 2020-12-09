@@ -29,7 +29,7 @@ namespace Spravochnik
         }
         void RegisterRoutes()
         {
-            //Hide elements if User is joining without account
+            //Hide elements if User is joining without account EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
             if (UserInfo.Email != null)
             {
                 dot3sh.IsVisible = true;
